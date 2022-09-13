@@ -2,28 +2,34 @@
   position: relative;
   overflow: hidden;
   background-color: #dadada;
+  font-size: x-large;
   border-radius: 4px;
   // box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-  width: 85%;
+  width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   z-index: 2;
   @include media-breakpoint-up(sm) {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: x-large;
+    width: 85%;
+    padding: 20px
   }
   .call-box-top {
     flex: 1 0 auto;
-    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
     @include media-breakpoint-up(md) {
     }
   }
   .call-box-bottom {
     flex: auto;
-    padding: 20px;
+    padding: 10px;
     border-top: 1px solid darken($white-offset, 5%);
     @include media-breakpoint-up(sm) {
       flex: 0 0 auto;

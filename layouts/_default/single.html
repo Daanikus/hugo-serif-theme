@@ -1,10 +1,19 @@
-{{ define "body_classes" }}page-default-single{{ end }}
-
-{{ define "main" }}
+{{ define "body_classes" }}page-default-single{{ end }} {{ define "main" }}
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
       <h1 class="title">{{.Title}}</h1>
+      {{ if .Params.image }}
+      <div class="team-image">
+        <img
+          width="360"
+          height="360"
+          alt="Photo of {{ .Title }}"
+          class="img-fluid mb-2"
+          src="{{ .Params.image | relURL }}"
+        />
+      </div>
+      {{ end }}
       <div class="content">{{.Content}}</div>
     </div>
   </div>
